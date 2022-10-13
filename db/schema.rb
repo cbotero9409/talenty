@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_12_225217) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_13_000724) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_12_225217) do
     t.integer "price"
     t.date "start_date"
     t.date "end_date"
-    t.boolean "status"
+    t.boolean "status", null: false
     t.bigint "user_id", null: false
     t.bigint "service_id", null: false
     t.datetime "created_at", null: false
@@ -89,6 +89,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_12_225217) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "address"
+    t.string "phone"
+    t.text "description"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
