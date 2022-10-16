@@ -1,6 +1,15 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  background:#EDF0F5;
+  border: solid rgb(230, 41, 20) 4px;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +18,96 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+#navbar-nav-talenty2{
+  display: flex;
+  align-items: center;
+  background:#EDF0F5;
+  justify-content: end;
+}
+
+.nav-link-talenty{
+  border-radius: 5px;
+  margin-left: 50px;
+  width: 156px;
+  height: 52px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #1CBA97;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #EEFEFB;
+}
+// BODY   ********************
+
+.container-talenty{
+  background:#EDF0F5 ;
+  border: solid rebeccapurple 30px;
+  width: 100%;
+}
+
+.text-and-icon-talenty{
+  border: solid rgb(235, 19, 19) 13px;
+  display: flex;
+  flex-direction: row;
+}
+
+.text-talenty{
+  border: solid rgb(235, 65, 19) 3px;
+}
+
+.search-talenty{
+  border: solid rgb(235, 19, 19) 13px;
+  height: 500px;
+  width: 100%;
+}
+.input-icon-princpal{
+  border: 2.05714px solid #11273C;
+  border-radius: 10.2857px;
+  background: #EDF0F5;
+  width: 474.17px;
+  height: 71.14px;
+  border: solid 5px yellow;
+  display: flex;
+  flex-direction: row;
+}
+.input-talenty{
+  border: solid 5px rgb(255, 0, 208);
+  width: 474.17px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.calendary-talenty{
+  border: solid 1px rgb(0, 255, 208);
+  height: 60px;
+  margin: 10px;
+  width: 20%;
+}
+.line-talenty{
+  border: solid 1px rgb(0, 255, 208);
+  height: 60px;
+  margin: 10px;
+  width: 20%;
+}
+.input-more-x{
+  border: solid 1px rgb(0, 255, 208);
+  height: 60px;
+  margin: 10px;
+  width: 20%;
+}
+
+.input-real-talenty{}
+.icon-x-talenty{}
+
+.icon-search-talenty{
+  width: 113.15px;
+  height: 71.14px;
+  border: 2.05714px solid #11273C;
+  border-radius: 0px 10.2857px 10.2857px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18.5143px 41.1429px 20.5714px;
 }

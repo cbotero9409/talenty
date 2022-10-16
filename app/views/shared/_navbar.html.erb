@@ -1,16 +1,14 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon ">
+  <div class=" container-fluid " id="navbar-nav-talenty2">
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+    <div class=" collapse  navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto ">
         <% if user_signed_in? %>
+          <%= current_user.email %>
           <li class="nav-item active">
             <%= link_to "Home", "#", class: "nav-link" %>
           </li>
@@ -26,11 +24,53 @@
             </div>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <li class="nav-login">
+            <%= link_to "Login", new_user_session_path, class: "nav-link nav-link-talenty " %>
           </li>
         <% end %>
       </ul>
     </div>
   </div>
+
+</div>
+
+<div class="container-talenty" >
+
+  <div class="text-and-icon-talenty">
+    <div class="text-talenty">
+      <h1>TALENTY</h1>
+      <h3>Connecting home needs with human talent</h3>
+      <p>Filter here the category you want to find, we are here to facilitate your ideal employee</p>
+    </div>
+    <div class="col">
+      <%= image_tag "logo-Talenty", width:350 %>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="search-talenty">
+
+    <div class="input-icon-princpal">
+
+      <div class="input-talenty">
+        <div class= " calendary-talenty " ></div>
+        <div class= " line-talenty " ></div>
+        <div class= " input-more-x " >
+          <div class= " input-real-talenty "  ></div>
+          <div class= " icon-x-talenty "  ></div>
+        </div>
+      </div>
+
+      <div class="icon-search-talenty">
+         <%= image_tag "icon_search", width:350 %>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
