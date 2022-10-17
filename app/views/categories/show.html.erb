@@ -1,0 +1,4 @@
+<% @workers.each do |worker| %>
+  <%= worker.first_name %>
+  <%= link_to worker.last_name, worker_path(worker) %>
+<% end %>
