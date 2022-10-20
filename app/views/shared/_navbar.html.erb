@@ -34,17 +34,24 @@
 
 </div>
 
-<div class="container-talenty" >
+<div class="container-talenty " >
 
   <div class="text-and-icon-talenty">
+
     <div class="text-talenty">
-      <h1>TALENTY</h1>
+      <h1>Talenty</h1>
       <h3>Connecting home needs with human talent</h3>
-      <p>Filter here the category you want to find, we are here to facilitate your ideal employee</p>
+      <div class="aliear-talenty">
+        <p>Filter here the category you want to find, we are here to</p>
+        <p>  facilitate your ideal employee</p>
+      </div>
+
     </div>
-    <div class="col">
+
+    <div class="icon_logo_talenty">
       <%= image_tag "logo-Talenty", width:350 %>
     </div>
+
   </div>
 
 
@@ -57,12 +64,26 @@
     <div class="input-icon-princpal">
 
       <div class="input-talenty">
-        <div class= " calendary-talenty " ></div>
-        <div class= " line-talenty " ></div>
-        <div class= " input-more-x " >
-          <div class= " input-real-talenty "  ></div>
-          <div class= " icon-x-talenty "  ></div>
+
+        <div class= " calendary-talenty " >
+          <%= image_tag "icon_calendar" %>
         </div>
+
+        <div class= " line-talenty " >
+           <%= image_tag "icon_line" %>
+        </div>
+
+        <div class= " input-more-x " >
+              <input
+                class= " input-real-talenty "
+                type="text"
+                placeholder="Search category"
+              >
+              <div class= " icon-x-talenty " >
+                <%= image_tag "icon_x" %>
+              </div>
+        </div>
+
       </div>
 
       <div class="icon-search-talenty">
