@@ -1,4 +1,7 @@
-<% @workers.each do |worker| %>
-  <%= worker.first_name %>
-  <%= link_to worker.last_name, worker_path(worker) %>
-<% end %>
+<h1><%= @category.name %></h1>
+<ul>
+  <% @workers.each do |worker| %>
+    <% name = "#{worker.first_name} #{worker.last_name}" %>
+    <li><%= link_to name, worker_path(worker) %></li>
+  <% end %>
+</ul>

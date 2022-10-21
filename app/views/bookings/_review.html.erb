@@ -1,0 +1,7 @@
+<% if @booking.review.nil? && @booking.status && @booking.service.user != current_user %>
+  <h2>Review</h2>
+  <%= render "reviews/form", review: @review, booking: @booking %>
+<% elsif @booking.review %>
+  <h2>Review</h2>
+  <p><%= @review.content %> <strong>(<%= @review.rating %>/5)</strong></p>
+<% end %>

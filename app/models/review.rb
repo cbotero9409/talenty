@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :user
+  belongs_to :booking
   has_many_attached :photos
 
   validates :content, length: { minimum: 5 }, allow_blank: true

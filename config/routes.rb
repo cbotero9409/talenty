@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :categories, only: :show
   get "workers/:id", to: "categories#worker", as: :worker
   resources :services, except: [:show, :index] do
-    resources :bookings, only: :create
+    resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index, :show]
+  resources :bookings, only: [:index, :show] do
+    resources :reviews, only: :create
+  end
 end

@@ -1,0 +1,11 @@
+<% bookings.each do |booking| %>
+  <% worker_name = "#{booking.service.user.first_name} #{booking.service.user.last_name}" %>
+  <ul>
+    <li>Service: <%= link_to booking.service.name, booking_path(booking) %></li>
+    <li>Start Date: <%= booking.start_date %></li>
+    <li>End Date: <%= booking.end_date %></li>
+    <li>Price: <%= booking.price %></li>
+    <li>Status: <%= booking.status %></li>
+    <li>Worker: <%= worker_name %></li>
+  </ul>
+<% end %>
