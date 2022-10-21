@@ -18,13 +18,13 @@ user4 = User.create!(email: "andresiba@gmail.com", password: "A#123456", first_n
 
 category1 = Category.create!(name: "Electricidad residencial")
 category2 = Category.create!(name: "Albañil")
-category3 = Category.create!(name: "Jardinería")
+category3 = Category.create!(name: "Jardineria")
 category4 = Category.create!(name: "Oficios Varios")
-category5 = Category.create!(name: "Carpintería")
+category5 = Category.create!(name: "Carpinteria")
 
-service1 = Service.create!(name: "Reparación cableado", price: 30_000, user: user1, category: category1)
-service2 = Service.create!(name: "Instalación breaker", price: 20_000, user: user1, category: category1)
-service3 = Service.create!(name: "Reparación de armarios", price: 70_000, user: user2, category: category5)
+service1 = Service.create!(name: "Reparacion cableado", price: 30_000, user: user1, category: category1)
+service2 = Service.create!(name: "Instalacion breaker", price: 20_000, user: user1, category: category1)
+service3 = Service.create!(name: "Reparacion de armarios", price: 70_000, user: user2, category: category5)
 service4 = Service.create!(name: "Arreglo cajones de la cocina", price: 50_000, user: user2, category: category5)
 service5 = Service.create!(name: "Podar el cesped", price: 90_000, user: user3, category: category3)
 service6 = Service.create!(name: "Limpieza de la casa", price: 60_000, user: user3, category: category4)
