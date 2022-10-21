@@ -12,7 +12,7 @@ Category.destroy_all
 User.destroy_all
 
 user1 = User.create!(email: "cbotero2709@gmail.com", password: "A#123456", first_name: "Camilo", last_name: "Botero", address: "Cra 17 #7-272", phone: "3216317798", description: "Soy un buen electricista")
-user2 = User.create!(email: "jancarlos0@gmail.com", password: "A#123456", first_name: "Jan", last_name: "Díaz", address: "Calle 50 #81-33", phone: "3234547654", description: "Tengo experiencia en carpintería")
+user2 = User.create!(email: "jancarlos0@gmail.com", password: "A#123456", first_name: "Jan", last_name: "Diaz", address: "Calle 50 #81-33", phone: "3234547654", description: "Tengo experiencia en carpintería")
 user3 = User.create!(email: "claudiad1999@gmail.com", password: "A#123456", first_name: "Claudia", last_name: "Enriquez", address: "Calle 80 #66b-30", phone: "3234856969", description: "Soy una buena jardinera, amo las plantas")
 user4 = User.create!(email: "andresiba@gmail.com", password: "A#123456", first_name: "Andres", last_name: "ibarguen", address: "Calle 12 # 6-58", phone: "3154657890", description: "Conocimiento en todo tipo de madera y cualquier trabajo en carpintería")
 
