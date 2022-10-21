@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_13_000724) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_21_154833) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,9 +44,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_000724) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "price"
-    t.date "start_date"
-    t.date "end_date"
-    t.boolean "status", null: false
+    t.datetime "start_date", precision: nil
+    t.datetime "end_date", precision: nil
+    t.boolean "status", default: false, null: false
     t.bigint "user_id", null: false
     t.bigint "service_id", null: false
     t.datetime "created_at", null: false
@@ -67,6 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_000724) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "booking_id", null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -102,6 +104,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_000724) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "services"
   add_foreign_key "bookings", "users"
+  add_foreign_key "reviews", "bookings"
   add_foreign_key "reviews", "users"
   add_foreign_key "services", "categories"
   add_foreign_key "services", "users"

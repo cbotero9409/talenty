@@ -1,0 +1,7 @@
+<% if @worker.reviews.any? %>
+  <h3>Reviews</h3>
+  <% @worker.reviews.each do |review| %>
+    <%= review.content %>
+    <strong>(<%= review.rating %>/5)</strong>
+  <% end %>
+<% end %>
