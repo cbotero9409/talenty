@@ -6,6 +6,7 @@
 #   movies = Movie.create!([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create!(name: "Luke", movie: movies.first)
 
+Review.destroy_all
 Booking.destroy_all
 Service.destroy_all
 Category.destroy_all
@@ -32,7 +33,7 @@ service6 = Service.create!(name: "Limpieza de la casa", price: 60_000, user: use
 booking1 = Booking.create!(price: 30_000, start_date: Date.new(2022,10,13), end_date: Date.new(2022,10,14), status: false, user: user2, service: service1)
 booking2 = Booking.create!(price: 20_000, start_date: Date.new(2022,11,13), end_date: Date.new(2022,11,14), status: false, user: user3, service: service2)
 booking3 = Booking.create!(price: 20_000, start_date: Date.new(2022,12,24), end_date: Date.new(2022,12,25), status: false, user: user4, service: service2)
-booking4 = Booking.create!(price: 45_000, start_date: Date.new(2022,11,15), end_date: Date.new(2022,11,15), status: false, user: user3, service: service3)
+booking4 = Booking.create!(price: 45_000, start_date: Date.new(2022,11,15), end_date: Date.new(2022,11,16), status: false, user: user3, service: service3)
 booking5 = Booking.create!(price: 84_000, start_date: Date.new(2022,10,31), end_date: Date.new(2022,11,01), status: false, user: user1, service: service5)
 booking6 = Booking.create!(price: 60_000, start_date: Date.new(2022,12,20), end_date: Date.new(2022,12,23), status: false, user: user4, service: service4)
 booking7 = Booking.create!(price: 50_000, start_date: Date.new(2022,9,13), end_date: Date.new(2022,9,14), status: false, user: user3, service: service4)
