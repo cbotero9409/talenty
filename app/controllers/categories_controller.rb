@@ -2,6 +2,11 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @workers = @category.users.uniq
+    @ratings = []
+    @workers.each do |worker|
+      reviews = worker.reviews
+      @ratings << calculate_rating(reviews)
+    end
   end
 
   def worker

@@ -1,7 +1,30 @@
-<h1><%= @category.name %></h1>
-<ul>
-  <% @workers.each do |worker| %>
-    <% name = "#{worker.first_name} #{worker.last_name}" %>
-    <li><%= link_to name, worker_path(worker) %></li>
-  <% end %>
-</ul>
+<div class= "container">
+  <h1><%= @category.name %></h1>
+  <div class="cards">
+    <% @workers.each_with_index do |worker, index| %>
+      <% name = "#{worker.first_name} #{worker.last_name}" %>
+      <div class="outer-div">
+        <%= link_to worker_path(worker) do %>
+          <div class="inner-div">
+            <div class="front">
+              <div class="front__face-photo"></div>
+              <div class="front__text">
+                  <h3 class="front__text-header"><%= name %></h3>
+                  <p class="front__text-para">Rating: <%= @ratings[index] %></p>
+              </div>
+            </div>
+            <div class="back">
+              <div class="social-media-wrapper">
+                <h3>Info</h3>
+                <ul class="no-style-list">
+                  <li><h5>Address: <%= worker.address %></h5></li>
+                  <li><h5>Phone: <%= worker.phone %></h5></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
