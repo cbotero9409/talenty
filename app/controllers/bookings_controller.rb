@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
   def index
     Booking.all.each { |booking| update_status(booking) }
-    @worker_bookings = Booking.joins(:service).where(service: {user: current_user})
-    @customer_bookings = Booking.where(user: current_user)
+    @worker_bookings = Booking.joins(:service).where(service: {user: current_user}).order(id: :desc)
+    @customer_bookings = Booking.where(user: current_user).order(id: :desc)
   end
 
   def new
@@ -41,6 +41,6 @@ class BookingsController < ApplicationController
   end
 
   def update_status(booking)
-    booking.update(status: true) if booking.end_date < DateTime.now
+    booking.end_date < (Time.now - (5 * 3600)).utc ? booking.update(status: true) : booking.update(status: false)
   end
 end

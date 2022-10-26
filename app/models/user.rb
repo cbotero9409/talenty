@@ -11,8 +11,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\z/, message: "only letters allowed" }
-  validates :phone, format: { with: /\A[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.0-9]*\z/, message: "invalid format" }
+  validates :first_name, :last_name, format: { with: /\A[a-zA-Zá-úÁ-Ú]*\z/, message: "only letters allowed" }, presence: false
+  validates :phone, format: { with: /\A[+]*[(]{0,1}[0-9]{0,4}[)]{0,1}[-\s\.0-9]*\z/, message: "invalid format" }, presence: false
 
   private
 

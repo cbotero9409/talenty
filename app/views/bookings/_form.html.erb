@@ -1,7 +1,7 @@
 <h2>Book Service</h2>
 <%= simple_form_for [service, booking] do |f| %>
   <%= f.input :start_date, as: :datetime, html5: true, input_html: {min: Date.today} %>
-  <%= f.input :end_date, as: :datetime, html5: true, input_html: {min: Date.today} %>
+  <%= f.input :end_date, as: :datetime, html5: false, input_html: {min: Date.today} %>
   <%= f.input :price, input_html: {value: service.price.to_i || 0}, readonly: true %>
   <%= f.submit "Submit Booking", class: "btn btn-primary" %>
 <% end %>
