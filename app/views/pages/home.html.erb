@@ -1,6 +1,133 @@
+<div class="container-home-talenty">
+  <div class="changue">
+    <div class="box-talenty" >
+     <%= image_tag "icon_home.svg"%>
+    </div>
+    <div class="box-talenty" >
+      <h3>Here, you can to search the category that you need!.</h3>
+    </div>
+    <div class="box-talenty" >
+      <%= image_tag "icon2_home.svg" %>
+    </div>
+  </div>
+  <div class="cards-talenty">
+    <%= render "categories" %>
+    <div class="card-talenty">
+    <img src="assets/pintoreria_home.svg" alt="">
+      <h6>Painters</h6>
+    </div>
+    <div class="card-talenty">
+    <img src="assets/plomero_home.svg" alt="">
+      <h6>Plumbers</h6>
+    </div>
+    <div class="card-talenty">
+    <img src="assets/ninera_home.png" alt="">
+      <h6>Babysitters</h6>
+    </div>
+    <div class="card-talenty">
+    <img src="assets/soldador_home.svg" alt="">
+      <h6>Welders</h6>
+    </div>
+  </div>
+</div>
+<div class="carousel-talenty py-4">
+   <h2 class="text-center"> Talenty Human</h2>
+    <div class="container">
+      <div class="slid-er">
+        <div class="slides" id="slides">
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img src="assets/baby.jpg" class="imagen" />
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img src="assets/albanil.jpg" class="imagen" />
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img src="assets/electricista.jpg" class="imagen"/>
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img src="assets/jardinero.jpg" class="imagen"/>
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img src="assets/niñera.jpg" class="imagen" />
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="" >
+                <img src="assets/oficios.jpg" class="imagen"/>
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img src="assets/pintor.jpg" class="imagen"/>
+              </a>
+            </div>
+          </div>
+          <!-- Mirror content -->
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img src="assets/soldador.jpg" class="imagen"/>
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img   src="assets/jardin.jpg" class="imagen" />
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img   src="assets/electr.jpg" class="imagen" />
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img   src="assets/limpie.jpg" class="imagen" />
+              </a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <a href="">
+                <img   src="assets/soldadura1.jpg" class="imagen" />
+              </a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
 <h1>Categories List</h1>
 <ul>
-  <% @categories.each do |category| %>
-    <li><%= link_to category.name, category_path(category) %></li>
-  <% end %>
+
 </ul>
