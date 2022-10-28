@@ -1,4 +1,13 @@
-<h2>Customer bookings</h2>
-<%= render "list", bookings: @customer_bookings %>
-<h2>Worker bookings</h2>
-<%= render "list", bookings: @worker_bookings %>
+
+<div class="container-b container">
+  <div class="row">
+    <div class="col-6 col-md-6 col-lg-6">
+      <h3 class="title-C">Customer Bookings</h3>
+        <%= render "customer_list", bookings: @customer_bookings %>
+    </div>
+    <div class="col-6 col-md-6 col-lg-6">
+      <h3 class="title-W">Worker Bookings</h3>
+        <%= render "worker_list", bookings: @worker_bookings %>
+    </div>
+  </div>
+</div>
