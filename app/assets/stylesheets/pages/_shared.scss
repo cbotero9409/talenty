@@ -6,3 +6,11 @@ a {
   list-style-type: none;
   padding-left: 0;
 }
+
+body {
+  background-size: cover;
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+justify-content: space-between;
+}
