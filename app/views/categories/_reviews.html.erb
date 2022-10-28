@@ -1,7 +1,27 @@
-<% if @worker.reviews.any? %>
-  <h3>Reviews</h3>
+<div class="container-reviews">
+  <% if @worker.reviews.any? %>
   <% @worker.reviews.each do |review| %>
-    <%= review.content %>
-    <strong>(<%= review.rating %>/5)</strong>
+    <div class="review-box">
+      <div class="caja-top">
+        <div class="perfil">
+          <div class="perfil-i1">
+            <%= cl_image_tag (review.booking.user.photo.key || "user") %>
+          </div>
+            <div class="name-user">
+              <strong><%= review.booking.user.first_name %></strong>
+              <p><%= review.created_at %></p>
+            </div>
+        </div>
+        <div class="reviews">
+          <% review.rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        </div>
+      </div>
+      <div class="comments">
+        <p><%= review.content %></p>
+      </div>
+    </div>
   <% end %>
 <% end %>
+</div>

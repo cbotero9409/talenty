@@ -1,5 +1,42 @@
-<h1><%= @worker.first_name %></h1>
-<h2>Rating: <%= @rating %></h2>
-<p>Description: <%= @worker.description %>
-<%= render "services"  %>
-<%= render "reviews"  %>
+<div class="container">
+  <div class="sombra">
+    <div class= "avatar-perfil" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path (@worker.photo.key || "user"), height: 140, width: 140, crop: :scale %>')"></div>
+    <div class="datos-perfil">
+        <h4 class="titulo-usuario"><%= @full_name %></h4>
+        <p class="bio-usuario m-0"><%= @worker.address %></p>
+        <div class= "star-widget">
+          <% @rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <% if @rating == 0 %>
+            <i class="fas fa-star invisible"></i>
+          <% end %>
+        </div>
+    </div>
+  </div>
+
+  <div class="row col-12">
+    <div class="col-12 col-lg-6 prof p-3">
+      <h2 class="my-4">
+        <strong> Work Profile</strong>
+      </h2>
+      <p class="py-3"><%= @worker.description %></p>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="d-flex m-1">
+        <div class="col-12 col-lg-6">
+          <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo1" class="photo">
+
+          <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo2" class="photo">
+        </div>
+        <div class="col-12 col-lg-6">
+           <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo3" class="photo">
+
+            <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo4" class="photo">
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "services" %>
+  <%= render "reviews" %>
+</div>

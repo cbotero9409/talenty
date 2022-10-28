@@ -14,16 +14,21 @@ class CategoriesController < ApplicationController
     @services = @worker.services
     @reviews = @worker.reviews
     @rating = calculate_rating(@reviews)
+    @full_name = full_name(@worker)
   end
 
   private
 
   def calculate_rating(reviews)
-    return "" unless reviews.any?
+    return 0 unless reviews.any?
 
     sum = 0
     reviews.each { |review| sum += review.rating}
     avg = sum / reviews.length
-    return "#{avg}/5"
+    return avg
+  end
+
+  def full_name(user)
+    "#{user.first_name} #{user.last_name}"
   end
 end
