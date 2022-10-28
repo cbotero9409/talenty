@@ -4,10 +4,16 @@
     <%= link_to worker_path(worker) do %>
       <div class="inner-div">
         <div class="front">
-          <div class="front__face-photo"></div>
+          <div class="front__face-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path (worker.photo.key || "user"), height: 300, crop: :fill %>')"></div>
           <div class="front__text">
               <h3 class="front__text-header"><%= name %></h3>
-              <p class="front__text-para">Rating: <%= @ratings[index] %></p>
+              <p class="front__text-para">
+                <div class="reviews">
+                  <% @ratings[index].times do %>
+                    <i class="fas fa-star"></i>
+                  <% end %>
+                </div>
+              </p>
           </div>
         </div>
         <div class="back">

@@ -1,19 +1,20 @@
-<h3>Services</h3>
-<% if @worker == current_user %>
-  <%= link_to "+ Add Service", new_service_path, class: "btn btn-primary" %>
-<% end %>
-<ul>
-  <% @worker.services.each do |service| %>
-    <% if @worker == current_user %>
-      <li>
-        <%= link_to service.name, edit_service_path(service) %>
-        <%= link_to "Delete",
-          service_path(service),
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-        %>
-      </li>
-    <% else %>
-      <li><%= link_to service.name, new_service_booking_path(service) %></li>
-    <% end %>
+<div class="container1 position-relative mb-3">
+  <h3>Services</h3>
+  <% if @worker == current_user %>
+    <%= link_to "+ Add Service", new_service_path, class: "bt1 position-absolute top-0 end-0 m-3" %>
   <% end %>
-</ul>
+  <ul>
+    <% @worker.services.each do |service| %>
+      <% if @worker == current_user %>
+        <li>
+          <%= link_to service.name, edit_service_path(service) %>
+          <%= link_to service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <i class="fa-solid fa-trash-can"></i>
+          <% end %>
+        </li>
+      <% else %>
+        <li><%= link_to service.name, new_service_booking_path(service) %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

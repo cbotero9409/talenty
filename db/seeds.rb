@@ -39,3 +39,9 @@ booking6 = Booking.create!(price: 60_000, start_date: Date.new(2022,12,20), end_
 booking7 = Booking.create!(price: 50_000, start_date: Date.new(2022,9,13), end_date: Date.new(2022,9,14), status: false, user: user3, service: service4)
 booking8 = Booking.create!(price: 90_000, start_date: Date.new(2022,11,23), end_date: Date.new(2022,11,28), status: false, user: user1, service: service3)
 booking9 = Booking.create!(price: 70_000, start_date: Date.new(2022,12,30), end_date: Date.new(2022,12,31), status: false, user: user1, service: service4)
+booking10 = Booking.create!(price: 84_000, start_date: Date.new(2022,10,31), end_date: Date.new(2022,11,01), status: false, user: user1, service: service6)
+booking11 = Booking.create!(price: 84_000, start_date: Date.new(2022,9,3), end_date: Date.new(2022,9,4), status: false, user: user1, service: service6)
+
+review1 = Review.create!(content: "Quedó divino", rating: 5, user: user3, booking: booking5)
+review2 = Review.create!(content: "Quedó horrible", rating: 1, user: user3, booking: booking10)
+review3 = Review.create!(content: "Quedó regular", rating: 3, user: user3, booking: booking11)
