@@ -1,8 +1,41 @@
-<% @categories.each do |category| %>
-  <%= link_to category_path(category.name) do %>
-    <div class="card-talenty">
-      <img src="assets/<%= category.name.gsub(/\s+/, "").downcase %>.png" alt="">
-      <h6><%= category.name %></h6>
+<div class="container-home-talenty">
+  <div class="changue">
+    <div class="box-talenty" >
+     <%= image_tag "icon_home.svg"%>
+    </div>
+    <div class="box-talenty" >
+      <h3>Here, you can to search the category that you need!.</h3>
+    </div>
+    <div class="box-talenty" >
+      <%= image_tag "icon2_home.svg" %>
+    </div>
   </div>
-  <% end %>
-<% end %>
+  <div class="cards-talenty">
+    <%# Categories from DB %>
+    <% @categories.each do |category| %>
+      <%= link_to category_path(category.name) do %>
+        <div class="card-talenty">
+          <img src="assets/<%= category.name.gsub(/\s+/, "").downcase %>.png" alt="">
+          <h6><%= category.name %></h6>
+      </div>
+      <% end %>
+    <% end %>
+    <%# End categories from DB %>
+    <div class="card-talenty">
+    <img src="assets/pintoreria_home.svg" alt="">
+      <h6>Painters</h6>
+    </div>
+    <div class="card-talenty">
+    <img src="assets/plomero_home.svg" alt="">
+      <h6>Plumbers</h6>
+    </div>
+    <div class="card-talenty">
+    <img src="assets/ninera_home.png" alt="">
+      <h6>Babysitters</h6>
+    </div>
+    <div class="card-talenty">
+    <img src="assets/soldador_home.svg" alt="">
+      <h6>Welders</h6>
+    </div>
+  </div>
+</div>
