@@ -1,12 +1,8 @@
-
-
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
  <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand logo-talenty-nav-var" do %>
-      <img src="assets/icon-talenty-small.svg" alt="">
+      <%= image_tag "icon-talenty-small.svg" %>
     <% end %>
-      <%= link_to "My Profile", worker_path(current_user), class: "text-talenty-nav-var " %>
-      <%= link_to "Bookings", bookings_path, class: "text-talenty-nav-var " %>
     <button
       class="navbar-toggler  "
       type="button" data-bs-toggle="collapse"
@@ -20,16 +16,15 @@
       <ul class="navbar-nav me-auto ">
           <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link " %>
+            <%= link_to "My Profile", worker_path(current_user), class: "text-talenty-nav-var " %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Bookings", bookings_path, class: "text-talenty-nav-var" %>
           </li>
           <li class="nav-item dropdown">
             <%= cl_image_tag (current_user.photo.key || "user"), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Edit profile", edit_user_registration_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>

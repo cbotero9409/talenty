@@ -170,3 +170,19 @@ $card-width: 250px;
   top: -5px;
 }
 }
+
+@keyframes zoominoutsinglefeatured {
+  0% {
+      transform: scale(1,1);
+  }
+  50% {
+      transform: scale(1.2,1.2);
+  }
+  100% {
+      transform: scale(1,1);
+  }
+}
+
+.card-talenty:hover {
+  animation: zoominoutsinglefeatured 1s infinite;
+}

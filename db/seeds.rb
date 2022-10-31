@@ -17,11 +17,11 @@ user2 = User.create!(email: "jancarlos0@gmail.com", password: "A#123456", first_
 user3 = User.create!(email: "claudiad1999@gmail.com", password: "A#123456", first_name: "Claudia", last_name: "Enriquez", address: "Calle 80 #66b-30", phone: "3234856969", description: "Soy una buena jardinera, amo las plantas")
 user4 = User.create!(email: "andresiba@gmail.com", password: "A#123456", first_name: "Andres", last_name: "ibarguen", address: "Calle 12 # 6-58", phone: "3154657890", description: "Conocimiento en todo tipo de madera y cualquier trabajo en carpintería")
 
-category1 = Category.create!(name: "Electricidad residencial")
-category2 = Category.create!(name: "Albañil")
-category3 = Category.create!(name: "Jardineria")
-category4 = Category.create!(name: "Oficios Varios")
-category5 = Category.create!(name: "Carpinteria")
+category1 = Category.create!(name: "Electricians")
+category2 = Category.create!(name: "Brickwork")
+category3 = Category.create!(name: "Gardening")
+category4 = Category.create!(name: "Various Trades")
+category5 = Category.create!(name: "Carpentry")
 
 service1 = Service.create!(name: "Reparacion cableado", price: 30_000, user: user1, category: category1)
 service2 = Service.create!(name: "Instalacion breaker", price: 20_000, user: user1, category: category1)

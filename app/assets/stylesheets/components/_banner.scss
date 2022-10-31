@@ -1,0 +1,35 @@
+//bannner
+.titulo-home{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 516px;
+}
+.texto-home{
+  height: 278px;
+  color: #11273C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.texto-home div{
+  margin-bottom: 15px;
+}
+.texto-home h1 {
+font-weight: 900;
+font-size: 48px;
+line-height: 60px;
+font-family: var(--tipografy-talenty1);
+}
+.texto-home h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  font-family: var(--tipografy-talenty1);
+}
+.texto-home p{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  font-family: var(--tipografy-talenty1);
+}
