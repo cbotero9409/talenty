@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def show
     @category = Category.find_by(name: params[:id])
     @workers = @category.users.uniq
