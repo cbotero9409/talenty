@@ -7,8 +7,8 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @booking.start_date = DateTime.tomorrow
-    @booking.end_date = DateTime.tomorrow
+    @booking.start_date = Time.now - (3600 * 4)
+    @booking.end_date = Time.now - (3600 * 3)
     @service = Service.find(params[:service_id])
   end
 
