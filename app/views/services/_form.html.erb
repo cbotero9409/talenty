@@ -1,6 +1,7 @@
 <%= simple_form_for [service] do |f| %>
   <%= f.input :name %>
+  <%= f.input :duration, collection: @duration, include_blank: false %>
   <%= f.input :price %>
   <%= f.association :category %>
-  <%= f.submit "Save service", class: "btn btn-primary" %>
+  <%= f.submit "Save service", class: "btn btn-success mt-3" %>
 <% end %>

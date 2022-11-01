@@ -3,6 +3,7 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+    @duration = [["30 minutes", 30], ["1 hour", 60], ["2 hours", 120], ["3 hours", 180], ["4 hours", 240], ["6 hours", 360], ["12 hours", 720], ["24 hours", 1440]]
   end
 
   def create
@@ -33,7 +34,7 @@ class ServicesController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:name, :price, :category_id)
+    params.require(:service).permit(:name, :price, :duration, :category_id)
   end
 
   def set_service

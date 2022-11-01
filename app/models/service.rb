@@ -3,6 +3,6 @@ class Service < ApplicationRecord
   belongs_to :category
   has_many_attached :photos
 
-  validates :name, presence: true
-  validates :price, numericality: { only_integer: true }
+  validates :name, :duration, presence: true
+  validates :price, :duration, numericality: { only_integer: true }
 end
