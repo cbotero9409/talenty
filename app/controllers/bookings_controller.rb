@@ -8,13 +8,13 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     @booking.start_date = Time.now - (3600 * 4)
-    @booking.end_date = Time.now - (3600 * 3)
     @service = Service.find(params[:service_id])
   end
 
   def create
     @service = Service.find(params[:service_id])
     @booking = Booking.new(booking_params)
+    @booking.end_date = @booking.start_date + (@service.duration * 60)
     @booking.service = @service
     @booking.user = current_user
     if @booking.save
@@ -37,7 +37,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :price, :status)
+    params.require(:booking).permit(:start_date, :price, :status)
   end
 
   def update_status(booking)
