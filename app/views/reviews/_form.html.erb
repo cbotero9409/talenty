@@ -1,5 +1,28 @@
+
+
+<div class="star-widget-rv">
+  <form action="#">
+    <input type="radio" name="rate" id="rate-5">
+    <label for="rate-5" class="fas fa-star"></label>
+    <input type="radio" name="rate" id="rate-4">
+    <label for="rate-4" class="fas fa-star"></label>
+    <input type="radio" name="rate" id="rate-3">
+    <label for="rate-3" class="fas fa-star"></label>
+    <input type="radio" name="rate" id="rate-2">
+    <label for="rate-2" class="fas fa-star"></label>
+    <input type="radio" name="rate" id="rate-1">
+    <label for="rate-1" class="fas fa-star"></label>
+    <div class="textarea">
+      <textarea cols="30" placeholder="Describe your experience.."></textarea>
+    </div>
+    <div class="btn">
+      <button type="submit">Post</button>
+    </div>
+  </form>
+</div>
+
 <%= simple_form_for [booking, review], url: booking_reviews_path(booking) do |f| %>
   <%= f.input :content %>
-  <%= f.input :rating %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience" %>
+  <%= f.submit "Submit review" %>
 <% end %>

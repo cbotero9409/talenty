@@ -7,7 +7,7 @@
     <% @worker.services.each do |service| %>
       <% if @worker == current_user %>
         <li>
-          <%= link_to service.name, edit_service_path(service), class: "me-1" %>
+          <%= link_to service.name.capitalize, edit_service_path(service), class: "me-1" %>
           <%= link_to service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
             <i class="fa-solid fa-trash-can"></i>
           <% end %>
