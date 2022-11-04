@@ -23,17 +23,27 @@
       <p class="p-4"><%= @worker.description %></p>
     </div>
     <div class="col-12 col-lg-6">
-      <div class="d-flex m-1">
-        <div class="col-12 col-lg-6">
-          <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo1" class="photo">
+      <div class="row">
+      <% if @worker.photos_services.attached? %>
+        <% @worker.photos_services.each do |photo| %>
+          <div class="col-6">
+            <img src="<%= cl_image_path (photo.key)%>" alt="" class="photo">
+          </div>
+        <% end %>
+      <% else %>
+        <div class="d-flex m-1">
+          <div class="col-12 col-lg-6">
+            <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo1" class="photo">
 
-          <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo2" class="photo">
-        </div>
-        <div class="col-12 col-lg-6">
-           <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo3" class="photo">
+            <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo2" class="photo">
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo3" class="photo">
 
-            <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo4" class="photo">
+              <img src="https://img.freepik.com/vector-premium/carpintero-su-lugar-trabajo-herramientas-trabajo_313242-616.jpg?w=996" alt="photo4" class="photo">
+          </div>
         </div>
+      <% end %>
       </div>
     </div>
   </div>
