@@ -7,6 +7,8 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to booking_path(@booking)
     else
+      @booking.review = nil
+      flash.alert = "Invalid Review"
       render "bookings/show", status: :unprocessable_entity
     end
   end

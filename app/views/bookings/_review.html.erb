@@ -3,24 +3,24 @@
   <%= render "reviews/form", review: @review, booking: @booking %>
 <% elsif @booking.review %>
   <h2>Review</h2>
-  <p><%= @review.content %> <strong>(<%= @review.rating %>/5)</strong></p>
   <div class="review-box">
       <div class="caja-top">
         <div class="perfil">
           <div class="perfil-i1">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm69urnMPSq0puSOqaFX85h4Xv9LgOBuzeqwn_APJdVoNwk5MbjiO5o5I3z47js3I6oRc&usqp=CAU" alt="">
+            <%= cl_image_tag (@booking.user.photo.key || "user"), height: 140, width: 140, crop: :scale %>
           </div>
-            <div class="name-user">
-              <strong>Camilo botero</strong>
-              <p>Buen trabajo y excelente servicio</p>
+          <div class="name-user">
+              <p class="mb-1"><strong><%= @booking.review.booking.user.first_name %></strong>&nbsp<%= @booking.review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
             </div>
         </div>
         <div class="reviews">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+          <% @booking.review.rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        </div>
+        </div>
+        <div class="comments">
+          <p><%= @booking.review.content %></p>
         </div>
       </div>
     </div>

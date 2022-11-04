@@ -71,7 +71,7 @@ input#rate-5:checked ~ label{
   text-shadow: 0 0 20px #952;
 }
 .container form{
-  display: none;
+  // display: none;
 }
 input:checked ~ form{
   display: block;
@@ -85,7 +85,7 @@ form header{
   text-align: center;
   transition: all 0.2s ease;
 }
-form .textarea{
+.textarea-review{
   height: 150px;
   width: 100%;
   overflow: hidden;
@@ -93,8 +93,8 @@ form .textarea{
   border-radius: 1rem;
 
 }
-form .textarea textarea{
-  height: 100%;
+.textarea-review textarea{
+  height: 100rem;
   width: 100%;
   outline: none;
   border: transparent;
@@ -104,16 +104,14 @@ form .textarea textarea{
   font-size: 17px;
   resize: none;
 }
-form .btn{
+form .btn-review{
   height: 60px;
   width: 100%;
   margin: 15px 0;
   margin-top: 1.5rem;
 
 }
-form .btn button{
-  height: 100%;
-  width: 100%;
+form .btn-review .btn-submit, form .btn{
   border: transparent;
   border-radius: 1rem;
   outline: none;
@@ -125,6 +123,12 @@ form .btn button{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-form .btn button:hover{
+
+form .btn-review .btn-submit {
+  height: 100%;
+  width: 100%;
+}
+
+form .btn-review .btn-submit:hover{
   background:#029680;
 }

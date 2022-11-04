@@ -7,7 +7,9 @@
       <h4>Worker: <%= @booking.service.user.first_name %></h4>
       <h4>Price: $<%= number_with_delimiter(@booking.price, :delimiter => '.') %></h4>
       <h4 class="mb-5">Status:&nbsp<span class="<%= @booking.status ? "text-success" : "text-danger" %>"><%= @booking.status ? " Done" : " Pending" %></span></h4>
-      <%= render "review" %>
+
     </div>
+    <%= render "bookings/review" %>
   </div>
+
 </div>
