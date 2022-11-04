@@ -10,3 +10,44 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+.logo-talenty-nav-var{
+width: 75%;
+display: flex;
+justify-content: flex-start;
+}
+
+.navbar-lewagon{
+  display: flex;
+  height: 70px;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  -webkit-box-shadow: 2px 12px 5px -6px rgba(17,40,61,0.58);
+  -moz-box-shadow: 2px 12px 5px -6px rgba(17,40,61,0.58);
+  box-shadow: 2px 12px 5px -6px rgba(17,40,61,0.58);
+}
+.text-talenty-nav-var{
+  // width: 80px;
+  height: 40px;
+  color: var(--color-talenty_primary);
+  font-family: var(--tipografy-talenty1);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 29px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.login-a{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #1CBA97;
+  border-radius: 5px;
+  font-family: var(--tipografy-talenty1);
+  display: flex;
+  color: #EDF0F5;
+  width: 100px;
+ height: 50px;
+ align-items: center;
+justify-content: center;
+}

@@ -1,0 +1,31 @@
+<% @workers.each_with_index do |worker, index| %>
+  <% name = "#{worker.first_name} #{worker.last_name}" %>
+  <div class="outer-div">
+    <%= link_to worker_path(worker) do %>
+      <div class="inner-div">
+        <div class="front">
+          <div class="front__face-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path (worker.photo.key || "user"), height: 300, crop: :fill %>')"></div>
+          <div class="front__text">
+              <h3 class="front__text-header"><%= name %></h3>
+              <p class="front__text-para m-0">
+                <div class="reviews">
+                  <% @ratings[index].times do %>
+                    <i class="fas fa-star"></i>
+                  <% end %>
+                </div>
+              </p>
+          </div>
+        </div>
+        <div class="back px-1">
+          <div class="social-media-wrapper">
+            <h3>Info</h3>
+            <ul class="no-style-list">
+              <li><h5>Address: <%= worker.address %></h5></li>
+              <li><h5>Phone: <%= worker.phone %></h5></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

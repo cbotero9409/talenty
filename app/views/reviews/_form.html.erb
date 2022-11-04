@@ -1,0 +1,9 @@
+<%= simple_form_for [booking, review], url: booking_reviews_path(booking), class: "position-relative" do |f| %>
+  <%= f.input :rating, collection: (1..5).to_a, label: false, input_html: {data: {controller: "star-rating"}}, class: "position-absolute top-0 start-100" %>
+  <div class="textarea-review">
+    <%= f.input :content, label: false %>
+  </div>
+  <div class="btn-review">
+    <%= f.submit "Submit review", class: "btn-submit" %>
+  </div>
+<% end %>

@@ -1,65 +1,36 @@
-// Specific CSS for your home-page
-// Variables
 
-:root {
-  --tipografy-talenty1: 'Arial';
-  --color-talenty_primary:#11273C;
-  --color-talenty_setario: #EDF0F5;
-}
-
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-}
-body{
-  background: #EDF0F5;
-}
-//INICIANDO
-.container-talenty-banner{
-  background:#EDF0F5 ;
-  // border: solid rebeccapurple 30px;
-  width: 100%;
-
-}
-.text-and-icon-talenty-banner{
-  // border: solid rgb(235, 19, 19) 13px;
+//bannner
+.titulo-home{
   display: flex;
-  flex-direction: row;
-  margin-top: 80px;
   justify-content: space-around;
+  align-items: center;
+  height: 516px;
 }
-
-.icon_logo_talenty_banner{
-  margin-bottom: 20px;
-  width: 520px;
-  height: 372px;
+.texto-home{
+  height: 278px;
+  color: #11273C;
   display: flex;
+  flex-direction: column;
   justify-content: center;
- }
-
-.text-talenty-banner h1{
-  font-family:var(--tipografy-talenty1);
-  font-style: normal;
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 60px;
-  color:var(--color-talenty_primary);
 }
-.text-talenty-banner h3{
-  font-family:var(--tipografy-talenty1);
-  font-style: normal;
+.texto-home div{
+  margin-bottom: 15px;
+}
+.texto-home h1 {
+font-weight: 900;
+font-size: 48px;
+line-height: 60px;
+font-family: var(--tipografy-talenty1);
+}
+.texto-home h3 {
   font-weight: 400;
   font-size: 32px;
   line-height: 48px;
-  color:var(--color-talenty_primary);
+  font-family: var(--tipografy-talenty1);
 }
-.text-talenty-banner p{
-  font-family:var(--tipografy-talenty1);
-  font-style: normal;
+.texto-home p{
   font-weight: 400;
   font-size: 13px;
   line-height: 22px;
-  color:var(--color-talenty_primary);
+  font-family: var(--tipografy-talenty1);
 }

@@ -1,0 +1,27 @@
+<% if @booking.review.nil? && @booking.status && @booking.service.user != current_user %>
+  <h2>Review</h2>
+  <%= render "reviews/form", review: @review, booking: @booking %>
+<% elsif @booking.review %>
+  <h2>Review</h2>
+  <div class="review-box">
+      <div class="caja-top">
+        <div class="perfil">
+          <div class="perfil-i1">
+            <%= cl_image_tag (@booking.user.photo.key || "user"), height: 140, width: 140, crop: :scale %>
+          </div>
+          <div class="name-user">
+              <p class="mb-1"><strong><%= @booking.review.booking.user.first_name %></strong>&nbsp<%= @booking.review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
+            </div>
+        </div>
+        <div class="reviews">
+          <% @booking.review.rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        </div>
+        </div>
+        <div class="comments">
+          <p><%= @booking.review.content %></p>
+        </div>
+      </div>
+    </div>
+<% end %>

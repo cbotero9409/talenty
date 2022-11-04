@@ -1,0 +1,153 @@
+
+.sombra{
+  background: #11273C;
+  border-radius: 10px;
+}
+.avatar-perfil {
+  display: flex;
+  width: 9rem;
+  height: 9rem;
+  // background-color: #D9DCF1;
+  position: relative;
+  top: 2rem;
+  left: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #1CBA97;
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, .2);
+}
+.star-widget{
+  margin:0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  }
+  .star-widget i{
+  font-size: 2rem;
+  color: #f9d71c;
+  padding: 8px;
+  position: relative;
+  bottom: 5.2rem;
+  left: 13rem;
+  float: left;
+  }
+
+  .titulo-usuario{
+    position: relative;
+    top: -5rem;
+    left: 14rem;
+    color: #D9DCF1;
+  }
+  .bio-usuario{
+    position: relative;
+    top: -5.1rem;
+    left: 14rem;
+    color: #D9DCF1;
+  }
+  .opciones-perfil button {
+    border: 0;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: #1CBA97;
+    color: #fff;
+    cursor: pointer;
+
+  }
+  .opciones-perfil {
+    display: flex;
+    position: absolute;
+    right: 23em;
+    top: 14.5rem;
+  }
+
+  .prof{
+    border: transparent .5px;
+    border-radius: 15px;
+    background-color: rgb(209, 207, 207);
+    padding: 5px;
+    text-align: justify;
+   }
+   .my-4{
+    text-align: center;
+   }
+
+  .photo{
+    margin: 3px;
+    border: solid .5px #39737B;
+    border-radius: 15px;
+    width: 19rem;
+    height: 13rem;
+  }
+
+  .container1{
+    border: transparent;
+    border-radius: 10px;
+    background-color:  #EDF0F5;
+    margin-top: 3rem;
+    padding: 20px;
+    // box-shadow: 0 .5rem 1rem #b0b0b0;
+  }
+  .container1 > a {
+    border: 0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    background-color: #1CBA97;
+    color: #fff;
+    cursor: pointer;
+  }
+  .bt1{
+    font-size: 20px;
+    // display: flex;
+    // position: absolute;
+    top: 56rem;
+    right: 21rem;
+  }
+  .container-reviews{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+
+  }
+  .review-box{
+    width: 38.5rem;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, .1);
+    background-color: #EDF0F5;
+    padding: 10px;
+    margin: 15px;
+  }
+  .perfil-i1{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .perfil-i1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+  }
+  .perfil{
+    display: flex;
+    align-items: center;
+  }
+  .name-user{
+    display: flex;
+    flex-direction: column;
+  }
+  .name-user strong{
+    color: #3d3d3d;
+    font-size: 1.3rem;
+  }
+  .name-user p{
+    color: #979797;
+    font-size: 1.1rem;
+  }
+  .reviews{
+    color: #f9d71c;
+    margin-top: .5rem;
+  }
+  .caja-top{
+    display: flex;
+    justify-content: space-between;
+  }
