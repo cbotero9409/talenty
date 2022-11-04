@@ -1,4 +1,4 @@
-<div class="container-reviews">
+<div class="container-reviews mb-5">
   <% if @worker.reviews.any? %>
   <% @worker.reviews.each do |review| %>
     <div class="review-box">
@@ -8,8 +8,7 @@
             <%= cl_image_tag (review.booking.user.photo.key || "user") %>
           </div>
             <div class="name-user">
-              <strong><%= review.booking.user.first_name %></strong>
-              <p><%= review.created_at %></p>
+              <p class="mb-1"><strong><%= review.booking.user.first_name %></strong>&nbsp<%= review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
             </div>
         </div>
         <div class="reviews">

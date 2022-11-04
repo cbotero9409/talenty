@@ -1,6 +1,15 @@
-<h1><%= @booking.service.name %> (<%= @booking.status ? "Done" : "Pending" %>)</h1>
-<p>Start Date: <%= @booking.start_date %></p>
-<p>End Date: <%= @booking.end_date %></p>
-<p>Price: <%= @booking.price %></p>
-<p>Worker: <%= @booking.service.user.first_name %></p>
-<%= render "review" %>
+<div class="container-rv">
+  <div class="rvw">
+    <div class="v">
+      <strong><h1>Service: <%= @booking.service.name %></h1></strong>
+      <h4>Start Time: <%= @booking.start_date.strftime('%d/%m/%y (%H:%M)') %></h4>
+      <h4>End Time: <%= @booking.end_date.strftime('%d/%m/%y (%H:%M)') %></h4>
+      <h4>Worker: <%= @booking.service.user.first_name %></h4>
+      <h4>Price: $<%= number_with_delimiter(@booking.price, :delimiter => '.') %></h4>
+      <h4 class="mb-5">Status:&nbsp<span class="<%= @booking.status ? "text-success" : "text-danger" %>"><%= @booking.status ? " Done" : " Pending" %></span></h4>
+
+    </div>
+    <%= render "bookings/review" %>
+  </div>
+
+</div>
