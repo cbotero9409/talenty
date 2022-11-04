@@ -1,7 +1,7 @@
 <div class="container1 position-relative mb-3">
   <h3>Services</h3>
   <% if @worker == current_user %>
-    <%= link_to "+ Add Service", new_service_path, class: "bt1 position-absolute top-0 end-0 m-3" %>
+    <%= link_to "+ Add Service", new_service_path, class: "bt1 position-absolute top-0 end-0 m-5" %>
   <% end %>
   <ul>
     <% @worker.services.each do |service| %>
