@@ -1,5 +1,5 @@
 <div class="contanner ">
-  <div class="container chatroom mt-5"
+  <div class="container chatroom mt-5 rounded-3"
     data-controller="chatroom-subscription"
     data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
     data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
@@ -27,7 +27,7 @@
     <%= f.input :content,
       label: false,
       placeholder: "Send Message...",
-      wrapper_html: {class: " flex-grow-1"}
+      wrapper_html: {class: " flex-grow-1 m-1"}
     %>
     <%= f.submit "Send", class: "btn btn-light mb-4 xx" %>
     <% end %>

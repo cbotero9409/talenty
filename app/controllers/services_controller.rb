@@ -16,7 +16,9 @@ class ServicesController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @duration = [["30 minutes", 30], ["1 hour", 60], ["2 hours", 120], ["3 hours", 180], ["4 hours", 240], ["6 hours", 360], ["12 hours", 720], ["24 hours", 1440]]
+  end
 
   def update
     if @service.update(service_params)

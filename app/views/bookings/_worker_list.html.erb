@@ -1,15 +1,15 @@
 <% bookings.each do |booking| %>
-  <% worker_name = "#{booking.service.user.first_name} #{booking.service.user.last_name}" %>
+  <% worker_name = "#{booking.service.user.first_name.capitalize} #{booking.service.user.last_name.capitalize}" %>
   <%= link_to booking_path(booking) do %>
-    <div class="card-d card-<%= booking.status %>">
+    <div class="card-d booking-effect card-<%= booking.status %>">
       <div class="left-column work-<%= booking.status %>">
           <h6 class="T1"><%= worker_name %></h6>
           <h2 class="T2"><%= booking.price %></h2>
         </div>
         <div class="right-column">
           <div>
-            <h4><%= booking.service.name %></h4>
-            <h6><%= booking.start_date.strftime('%d/%m/%y (%H:%M)') %> - <%= booking.end_date.strftime('%d/%m/%y (%H:%M)') %></h6>
+            <h4><%= booking.service.name.capitalize %></h4>
+            <h6 class="text-muted"><%= booking.start_date.strftime('%d/%m/%y (%H:%M)') %> - <%= booking.end_date.strftime('%d/%m/%y (%H:%M)') %></h6>
           </div>
         </div>
     </div>
