@@ -13,7 +13,7 @@
           <% end %>
         </li>
       <% else %>
-        <li><%= link_to service.name, new_service_booking_path(service) %></li>
+        <li><%= link_to service.name.capitalize, new_service_booking_path(service) %></li>
       <% end %>
     <% end %>
   </ul>

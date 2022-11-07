@@ -1,5 +1,5 @@
 <% @workers.each_with_index do |worker, index| %>
-  <% name = "#{worker.first_name} #{worker.last_name}" %>
+  <% name = "#{worker.first_name.capitalize} #{worker.last_name.capitalize}" %>
   <div class="outer-div">
     <%= link_to worker_path(worker) do %>
       <div class="inner-div">
