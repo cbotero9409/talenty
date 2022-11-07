@@ -111,7 +111,7 @@ form .btn-review{
   margin-top: 1.5rem;
 
 }
-form .btn-review .btn-submit, form .btn{
+form .btn-review .btn-submit, form .btn, .btn-booking{
   border: transparent;
   border-radius: 1rem;
   outline: none;
@@ -122,6 +122,7 @@ form .btn-review .btn-submit, form .btn{
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 10px;
 }
 
 form .btn-review .btn-submit {
@@ -131,4 +132,8 @@ form .btn-review .btn-submit {
 
 form .btn-review .btn-submit:hover{
   background:#029680;
+}
+
+.btn-chat {
+  margin-bottom: -40px;
 }

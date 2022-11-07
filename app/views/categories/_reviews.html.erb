@@ -8,7 +8,8 @@
             <%= cl_image_tag (review.booking.user.photo.key || "user") %>
           </div>
             <div class="name-user">
-              <p class="mb-1"><strong><%= review.booking.user.first_name %></strong>&nbsp<%= review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
+              <p class="m-0"><strong><%= review.booking.user.first_name %></strong>&nbsp<%= review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
+              <p class="m-0"><%= review.booking.service.name %></p>
             </div>
         </div>
         <div class="reviews">

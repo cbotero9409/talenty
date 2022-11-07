@@ -1,6 +1,6 @@
 <div class="container">
   <div class="sombra">
-    <div class= "avatar-perfil" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path (@worker.photo.key || "user"), height: 140, width: 140, crop: :scale %>')"></div>
+    <div class= "avatar-perfil" style="background-image: url('<%= cl_image_path (@worker.photo.key || "user"), height: 140, width: 140, crop: :scale %>')"></div>
     <div class="datos-perfil">
         <h4 class="titulo-usuario"><%= @full_name %></h4>
         <p class="bio-usuario m-0"><%= @worker.address %></p>
