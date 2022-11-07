@@ -50,7 +50,7 @@ user2.photos_services.attach(io: URI.open('app/assets/images/W.png'), filename: 
 user2.save
 user3.photo.attach(io: URI.open('app/assets/images/ingc.jpg'), filename: "2.png", content_type: "image/png")
 user3.save
-user4.photo.attach(io: URI.open('app/assets/images/X.jpg'), filename: "2.png", content_type: "image/png")
+user4.photo.attach(io: URI.open('app/assets/images/Z.jpg'), filename: "2.png", content_type: "image/png")
 user4.save
 user5.photo.attach(io: URI.open('app/assets/images/E.png'), filename: "2.png", content_type: "image/png")
 user5.save
