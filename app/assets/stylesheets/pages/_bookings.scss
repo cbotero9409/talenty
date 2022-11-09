@@ -7,7 +7,7 @@
 }
 
 .work-false {
-  background: linear-gradient(#31113C, #ab1a1a);
+  background: linear-gradient(#3C3111, #ab9b1a);
 }
 
 .title-b{
@@ -22,8 +22,8 @@
 // 	height: 100vh;
 // }
 .title-C, .title-W{
-  display: flex;
-  // justify-content: center;
+  // display: flex;
+  justify-content: center;
   // font-size: 3rem;
   margin-bottom: 2rem;
 }
@@ -37,7 +37,7 @@
 	margin: 0 auto;
   margin-bottom: 3rem;
 	overflow: hidden;
-	width: 40rem;
+	width: 36rem;
   height: 15rem;
   color: black;
 }
@@ -47,7 +47,7 @@
 }
 
 .card-false {
-  box-shadow: 0 .5rem 1rem  #ab1a1a;
+  box-shadow: 0 .5rem 1rem  #ab9b1a;
 }
 
 .card-b{
@@ -64,6 +64,7 @@
   letter-spacing: .1rem;
 	margin: 1rem 0;
   text-align: justify;
+  font-size: 1.5rem;
 }
 
 .T1{

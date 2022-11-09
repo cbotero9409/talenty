@@ -1,19 +1,23 @@
 <div class="container1 position-relative mb-3">
   <h3>Services</h3>
   <% if @worker == current_user %>
-    <%= link_to "+ Add Service", new_service_path, class: "bt1 position-absolute top-0 end-0 m-5" %>
+    <%= link_to "+ Add Service", new_service_path, class: "bt1 position-absolute top-0 end-0" %>
   <% end %>
-  <ul>
+  <ul class="list-group mt-4 border border-3 rounded">
     <% @worker.services.each do |service| %>
       <% if @worker == current_user %>
-        <li>
-          <%= link_to service.name.capitalize, edit_service_path(service), class: "me-1" %>
-          <%= link_to service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-action">
+          <div class="me-auto ">
+            <%= link_to service.name.capitalize, edit_service_path(service), class: "link-full" %>
+          </div>
+          <%= link_to service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"link-inside" do %>
             <i class="fa-solid fa-trash-can"></i>
           <% end %>
-        </li>
+          </li>
       <% else %>
-        <li><%= link_to service.name.capitalize, new_service_booking_path(service) %></li>
+      <li class="list-group-item list-group-item-action">
+        <%= link_to service.name.capitalize, new_service_booking_path(service), class: "link-full-2" %>
+        </li>
       <% end %>
     <% end %>
   </ul>

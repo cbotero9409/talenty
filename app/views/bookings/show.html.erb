@@ -1,12 +1,12 @@
 <div class="container-rv">
   <div class="rvw">
     <div class="v position-relative">
-      <strong><h1><%= @booking.service.name.capitalize %></h1></strong>
+      <strong><h1 class="text-center"><%= @booking.service.name.capitalize %></h1></strong>
       <h4>Start Time: <%= @booking.start_date.strftime('%d/%m/%y (%H:%M)') %></h4>
       <h4>End Time: <%= @booking.end_date.strftime('%d/%m/%y (%H:%M)') %></h4>
       <h4>Worker: <%= @booking.service.user.first_name.capitalize %></h4>
       <h4>Price: $<%= number_with_delimiter(@booking.price, :delimiter => '.') %></h4>
-      <h4 class="mb-5 pe-3">Status:&nbsp<span class="<%= @booking.status ? "text-success" : "text-danger" %>"><%= @booking.status ? " Done" : " Pending" %></span></h4>
+      <h4 class="mb-5 pe-3">Status:&nbsp<span class="fw-bold <%= @booking.status ? "text-success" : "text-warning" %>"><%= @booking.status ? " Done" : " Pending" %></span></h4>
       <%= link_to "Send a Message", chatroom_path(1), class: "btn btn-success btn-booking position-absolute bottom-0 end-0 me-4 btn-chat" %>
     </div>
 
