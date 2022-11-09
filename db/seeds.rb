@@ -16,7 +16,7 @@ User.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('chatrooms')
 
 user1 = User.create!(email: "cbotero2709@gmail.com", password: "A#123456", first_name: "Camilo", last_name: "Botero", address: "Avenue 17 #7-272", phone: "3216317798", description: "Electrician technician with almost 10 years of experience in the management and installation of different old and new electrical systems and install points of light, all kinds of panels, electrical assembly of motors, plates and all kinds of circuits. My knowledge and experience have always made me emphasize professionalism above anything else. I have been working in countries like Iceland and Norway. Fluent in English.")
-user2 = User.create!(email: "jancarlos0@gmail.com", password: "A#123456", first_name: "Jan", last_name: "Diaz", address: "Street 50 #81-33", phone: "3234547654", description: "Skilled and passionate carpenter with over 10 years experience in residential and commercial construction. Positive reputation for quality work, on-time construction and projects completed at or below budget. Excellent ability to communicate with clients and bring their visions and dreams to life. Knowledge of all aspects of construction, including plumbing and electrical. Design, monitoring and ensuring all structures are compliant. Specializing in custom cabinetry, designer furniture, and foundation repair and installation.")
+user2 = User.create!(email: "jancarlos0@gmail.com", password: "A#123456", first_name: "Pablo", last_name: "Díaz", address: "Street 50 #81-33", phone: "3234547654", description: "Skilled and passionate carpenter with over 10 years experience in residential and commercial construction. Positive reputation for quality work, on-time construction and projects completed at or below budget. Excellent ability to communicate with clients and bring their visions and dreams to life. Knowledge of all aspects of construction, including plumbing and electrical. Design, monitoring and ensuring all structures are compliant. Specializing in custom cabinetry, designer furniture, and foundation repair and installation.")
 user3 = User.create!(email: "claudiad1999@gmail.com", password: "A#123456", first_name: "Claudia", last_name: "Enriquez", address: "Street 80 #66b-30", phone: "3234856969", description: "Soy una buena jardinera, amo las plantas")
 user4 = User.create!(email: "andresiba@gmail.com", password: "A#123456", first_name: "Andres", last_name: "ibarguen", address: "Street 12 # 6-58", phone: "3154657890", description: "Conocimiento en todo tipo de madera y cualquier trabajo en carpintería")
 user5 = User.create!(email: "andres1@gmail.com", password: "A#123456", first_name: "Felipe", last_name: "Espinoza", address: "Street 30 #70-31")
@@ -133,7 +133,7 @@ booking4 = Booking.create!(price: 45_000, start_date: Date.new(2022,11,15), end_
 booking5 = Booking.create!(price: 84_000, start_date: Date.new(2022,10,31), end_date: Date.new(2022,11,01), status: false, user: user1, service: service5)
 booking6 = Booking.create!(price: 60_000, start_date: Date.new(2022,12,20), end_date: Date.new(2022,12,23), status: false, user: user4, service: service4)
 booking7 = Booking.create!(price: 50_000, start_date: Date.new(2022,9,13), end_date: Date.new(2022,9,14), status: false, user: user3, service: service4)
-booking8 = Booking.create!(price: 90_000, start_date: Date.new(2022,11,05), end_date: Date.new(2022,11,06), status: false, user: user1, service: service3)
+booking8 = Booking.create!(price: 90_000, start_date: Date.new(2022,11,05), end_date: Date.new(2022,11,06), status: false, user: user4, service: service3)
 booking9 = Booking.create!(price: 70_000, start_date: Date.new(2022,12,30), end_date: Date.new(2022,12,31), status: false, user: user1, service: service4)
 booking10 = Booking.create!(price: 84_000, start_date: Date.new(2022,10,31), end_date: Date.new(2022,11,01), status: false, user: user1, service: service6)
 booking11 = Booking.create!(price: 84_000, start_date: Date.new(2022,9,3), end_date: Date.new(2022,9,4), status: false, user: user1, service: service6)
@@ -141,6 +141,7 @@ booking12 = Booking.create!(price: 120_000, start_date: Date.new(2022,11,8), end
 booking13 = Booking.create!(price: 100_000, start_date: Date.new(2022,11,5), end_date: Date.new(2022,11,8), status: false, user: user2, service: service9)
 booking14 = Booking.create!(price: 200_000, start_date: Date.new(2022,11,7), end_date: Date.new(2022,11,9), status: false, user: user2, service: service12)
 booking15 = Booking.create!(price: 150_000, start_date: Date.new(2022,11,10), end_date: Date.new(2022,11,12), status: false, user: user2, service: service13)
+booking16 = Booking.create!(price: 70_000, start_date: Date.new(2021,12,30), end_date: Date.new(2021,12,31), status: false, user: user1, service: service4)
 
 
 review1 = Review.create!(content: "It was divine", rating: 5, user: user3, booking: booking5)
@@ -149,5 +150,6 @@ review3 = Review.create!(content: "It was regular", rating: 3, user: user3, book
 review4 = Review.create!(content: "It was perfect work", rating: 5, user: user1, booking: booking1)
 review5 = Review.create!(content: "great job", rating: 4, user: user1, booking: booking2)
 review6 = Review.create!(content: "wonderful job and excellent person", rating: 4, user: user1, booking: booking3)
+review7 = Review.create!(content: "Good job and nice person", rating: 5, user: user2, booking: booking8)
 
 chatroom = Chatroom.create!(name: "Booking")
