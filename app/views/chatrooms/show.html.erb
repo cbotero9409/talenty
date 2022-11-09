@@ -1,9 +1,12 @@
 <div class="contanner ">
+
   <div class="container chatroom mt-5 rounded-3"
     data-controller="chatroom-subscription"
     data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
     data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
-    <h1><%= @chatroom.name %></h1>
+    <%= link_to :back, class: "btn btn-success mt-3 btn-return" do %>
+      <i class="fa-solid fa-circle-arrow-left"></i>
+    <% end %>
 
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
