@@ -4,12 +4,12 @@
     <div class="card-d booking-effect card-<%= booking.status %>">
       <div class="left-column work-<%= booking.status %>">
           <h6 class="T1"><%= worker_name %></h6>
-          <h2 class="T2">$<%= number_with_delimiter(booking.price, :delimiter => '.') %></h2>
+          <h2 class="T2 font_text">$<%= number_with_delimiter(booking.price, :delimiter => '.') %></h2>
         </div>
         <div class="right-column">
           <div>
-            <h4><%= booking.service.name.capitalize %></h4>
-            <h6 class="text-muted"><%= booking.start_date.strftime('%d/%m/%y (%H:%M)') %> - <%= booking.end_date.strftime('%d/%m/%y (%H:%M)') %></h6>
+            <h4 class=""><%= booking.service.name.capitalize %></h4>
+            <h6 class="text-muted font_text"><%= booking.start_date.strftime('%d/%m/%y (%H:%M)') %> - <%= booking.end_date.strftime('%d/%m/%y (%H:%M)') %></h6>
           </div>
         </div>
     </div>

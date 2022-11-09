@@ -10,7 +10,7 @@
             <%= cl_image_tag (@booking.user.photo.key || "user"), height: 140, width: 140, crop: :scale %>
           </div>
           <div class="name-user">
-              <p class="mb-1"><strong><%= @booking.review.booking.user.first_name %></strong>&nbsp<%= @booking.review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
+              <p class="mb-1"><strong class="font_title"><%= @booking.review.booking.user.first_name %></strong>&nbsp<%= @booking.review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
             </div>
         </div>
         <div class="reviews">

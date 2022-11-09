@@ -1,5 +1,8 @@
+<% if @worker.reviews.any? %>
+<h3 class="ms-4">Reviews</h3>
 <div class="container-reviews mb-5">
-  <% if @worker.reviews.any? %>
+
+
   <% @worker.reviews.each do |review| %>
     <div class="review-box">
       <div class="caja-top">
@@ -8,8 +11,8 @@
             <%= cl_image_tag (review.booking.user.photo.key || "user") %>
           </div>
             <div class="name-user">
-              <p class="m-0"><strong><%= review.booking.user.first_name %></strong>&nbsp<%= review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
-              <p class="m-0"><%= review.booking.service.name %></p>
+              <p class="m-0"><strong class="font_title"><%= review.booking.user.first_name %></strong>&nbsp<%= review.created_at.strftime('(%d/%m/%y %H:%M)') %></p>
+              <p class="m-0 font_title"><%= review.booking.service.name %></p>
             </div>
         </div>
         <div class="reviews">
@@ -23,5 +26,6 @@
       </div>
     </div>
   <% end %>
-<% end %>
+
 </div>
+<% end %>

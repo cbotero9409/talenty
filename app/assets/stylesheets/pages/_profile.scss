@@ -83,17 +83,18 @@
     border: transparent;
     border-radius: 10px;
     background-color:  #EDF0F5;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 20px;
     // box-shadow: 0 .5rem 1rem #b0b0b0;
   }
   .container1 > a {
     border: 0;
-    padding: 5px 12px;
+    padding: 2px 9px;
     border-radius: 8px;
     background-color: #1CBA97;
     color: #fff;
     cursor: pointer;
+    margin: 20px;
   }
   .bt1{
     font-size: 20px;
@@ -150,4 +151,18 @@
   .caja-top{
     display: flex;
     justify-content: space-between;
+  }
+
+  .link-full {
+    position: absolute;
+    width: 100%;
+  }
+
+  .link-full-2 {
+    display: block;
+    width: 100%;
+  }
+
+  .link-inside {
+    z-index: 1000;
   }
