@@ -13,7 +13,7 @@
   <div class="cards-talenty">
     <%# Categories from DB %>
     <% @categories.each do |category| %>
-      <%= link_to category_path(category.name) do %>
+      <%= link_to category_path(category.name, "#") do %>
         <div class="card-talenty">
           <%= image_tag category.name.gsub(/\s+/, "").downcase %>
           <h6><%= category.name %></h6>
